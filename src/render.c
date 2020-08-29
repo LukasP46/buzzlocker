@@ -2,6 +2,8 @@
  * render.c
  *
  * Created by buzzert <buzzert@buzzert.net> 2019-01-18
+ * Modified by Lukas Pajak <lukas.pajak@gmx.de> 2020-08-20
+ * 
  */
 
 #include "render.h"
@@ -12,6 +14,10 @@
 #include <math.h>
 
 static const double kLogoBackgroundWidth = 500.0;
+
+static const double kLogoBackgroundColorR = 226.0;
+static const double kLogoBackgroundColorG = 35.0;
+static const double kLogoBackgroundColorB = 26.0;
 
 GBytes* get_data_for_resource(const char *resource_path)
 {
@@ -236,7 +242,7 @@ void draw_logo(saver_state_t *state)
 
     // Draw bar background
     cairo_save(cr);
-    cairo_set_source_rgb(cr, (208.0 / 255.0), (69.0 / 255.0), (255.0 / 255.0));
+    cairo_set_source_rgb(cr, (kLogoBackgroundColorR / 255.0), (kLogoBackgroundColorG / 255.0), (kLogoBackgroundColorB / 255.0));
     double fill_height = (state->canvas_height * state->logo_fill_progress);
     cairo_rectangle(cr, 0, 0, kLogoBackgroundWidth, fill_height);
     cairo_fill(cr);

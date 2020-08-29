@@ -4,8 +4,7 @@ This is a graphical screen locker for X11, for use in conjunction with
 [XSecureLock](https://github.com/google/xsecurelock). It uses PAM for authentication,
 so you can use it with your Yubikey/fingerprint scanner, etc. as well.
 
-![buzzlocker screenshot](screenshots/buzzlocker.png "buzzlocker")
-
+This fork contains an easier to set background color (in source code) and the Arch Linux Logo instead of the old one.
 ## Building
 
 This project uses the Meson build system:
